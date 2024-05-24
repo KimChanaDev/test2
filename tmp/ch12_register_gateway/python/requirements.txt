@@ -1,5 +1,0 @@
-importlib-metadata==4.13.0
-fastapi
-uvicorn
-pydantic
-nameko
