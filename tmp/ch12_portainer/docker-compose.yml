@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  portainer:
+    container_name: portainer
+    restart: unless-stopped
+    image: portainer/portainer
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    networks:
+      - default
+      
+    environment:
+      VIRTUAL_HOST: portainer.chanawee.online
+      VIRTUAL_PORT: 9000
+      LETSENCRYPT_HOST: portainer.chanawee.online
+
+volumes: 
+  portainer_data:
+
+networks:
+    default:
+       external:
+         name: webproxy
