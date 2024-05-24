@@ -1,4 +1,4 @@
-version: '2'
+version: '3.8'
 
 services:
   kong:
@@ -116,9 +116,9 @@ volumes:
   
 networks:
   webproxy:
-    external:
-      name: webproxy
+    name: webproxy
+    external: true
   default:
-    external:
-      name: kong_network
+    name: kong_network
+    external: true
       
