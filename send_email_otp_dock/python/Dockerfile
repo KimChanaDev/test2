@@ -1,5 +1,5 @@
 FROM python:3.7.3-alpine3.8
-RUN apk add --no-cache mariadb-dev build-base
+RUN apk add --no-cache build-base
 WORKDIR /app
 COPY rpc.py .
 COPY requirements.txt .
